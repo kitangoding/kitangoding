@@ -1,1 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support @kitangoding - Donasi Pembelian Laptop/PC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6',
+                        light: '#f8fafc',
+                        dark: '#1e293b',
+                        code: '#0f172a'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            min-height: 100vh;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .progress-bar {
+            transition: width 1s ease-in-out;
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        .code-badge {
+            font-family: 'Fira Code', monospace;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .gradient-bg {
+            background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+        }
+    </style>
+</head>
+<body class="font-poppins text-dark">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-primary rounded-full h-10 w-10 flex items-center justify-center text-white font-bold mr-3">K</div>
+                <div class="text-xl font-bold text-primary">@kitangoding</div>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-primary transition">Beranda</a></li>
+                    <li><a href="#tujuan" class="hover:text-primary transition">Tujuan</a></li>
+                    <li><a href="#donasi" class="hover:text-primary transition">Donasi</a></li>
+                    <li><a href="#konten" class="hover:text-primary transition">Konten Gratis</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-primary">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Bantu Saya Upgrade Perangkat Coding</h1>
+                <p class="text-xl mb-8">Sebagai mahasiswa IT, saya berkomitmen untuk terus membagikan source code gratis dan pengetahuan programming. Bantu saya dengan donasi untuk membeli laptop/PC yang lebih baik.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#donasi" class="bg-white text-primary font-bold py-3 px-8 rounded-full text-lg transition duration-300 hover:bg-blue-50 inline-block">Donasi Sekarang</a>
+                    <a href="#konten" class="border-2 border-white text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 hover:bg-white hover:text-primary inline-block">Lihat Karya Saya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Progress Donasi</h2>
+            
+            <div class="max-w-2xl mx-auto mb-10">
+                <div class="flex justify-between mb-2">
+                    <span>Terkumpul: <span class="font-bold" id="terkumpul">Rp 2.150.000</span></span>
+                    <span>Target: <span class="font-bold">Rp 8.000.000</span></span>
+                </div>
+                <div class="h-4 bg-gray-200 rounded-full overflow-hidden">
+                    <div class="h-full bg-primary progress-bar" style="width: 27%"></div>
+                </div>
+                <p class="text-center mt-4 text-gray-600">27% tercapai! Terima kasih untuk semua supportnya!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-light p-6 rounded-xl shadow-md card text-center">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Programming</h3>
+                    <p class="text-gray-600">Membuat lebih banyak project dan source code gratis</p>
+                </div>
+                <div class="bg-light p-6 rounded-xl shadow-md card text-center">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-video"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Tutorial</h3>
+                    <p class="text-gray-600">Produksi video tutorial programming berkualitas</p>
+                </div>
+                <div class="bg-light p-6 rounded-xl shadow-md card text-center">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Edukasi</h3>
+                    <p class="text-gray-600">Berbagi ilmu dengan komunitas developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tujuan Section -->
+    <section id="tujuan" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Mengapa Saya Membutuhkan Dukungan?</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-md mb-8">
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Laptop Saat Ini Sudah Tidak Memadai</h3>
+                    <p class="mb-4">Sebagai mahasiswa IT yang aktif membuat konten programming dan berbagi source code gratis, saya menghadapi kendala dengan perangkat yang sudah berusia lebih dari 5 tahun:</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li>Spec terbatas untuk programming dan video editing</li>
+                        <li>Sering hang saat menjalankan software development</li>
+                        <li>Tidak mampu menjalankan tools modern untuk konten kreator</li>
+                        <li>Battery sudah drop sehingga harus terus terhubung listrik</li>
+                    </ul>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg mt-6">
+                        <h4 class="text-lg font-semibold mb-2">Dampak Donasi Anda:</h4>
+                        <p>Dengan dukungan Anda, saya akan mampu:</p>
+                        <ul class="list-disc pl-5 mt-2">
+                            <li>Membuat lebih banyak project open source</li>
+                            <li>Produksi video tutorial programming berkualitas</li>
+                            <li>Live coding session untuk berbagi ilmu</li>
+                            <li>Mengembangkan tools gratis untuk komunitas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Konten Gratis Section -->
+    <section id="konten" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Yang Sudah Saya Bagikan Gratis</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-code p-6 rounded-xl shadow-md text-white">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">Source Code Projek</h3>
+                        <span class="code-badge bg-primary text-xs px-2 py-1 rounded">JavaScript</span>
+                    </div>
+                    <p class="mb-4">Berbagai project programming yang dapat diakses gratis di GitHub</p>
+                    <div class="flex items-center text-sm text-blue-200">
+                        <i class="fab fa-github mr-2"></i>
+                        <span>github.com/kitangoding</span>
+                    </div>
+                </div>
+                
+                <div class="bg-code p-6 rounded-xl shadow-md text-white">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">Tutorial Programming</h3>
+                        <span class="code-badge bg-primary text-xs px-2 py-1 rounded">Video</span>
+                    </div>
+                    <p class="mb-4">Video tutorial lengkap dari dasar sampai advanced secara gratis</p>
+                    <div class="flex items-center text-sm text-blue-200">
+                        <i class="fab fa-youtube mr-2"></i>
+                        <span>youtube.com/kitangoding</span>
+                    </div>
+                </div>
+                
+                <div class="bg-code p-6 rounded-xl shadow-md text-white">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">Tips & Tricks</h3>
+                        <span class="code-badge bg-primary text-xs px-2 py-1 rounded">Blog</span>
+                    </div>
+                    <p class="mb-4">Artikel tentang programming, debugging, dan best practices</p>
+                    <div class="flex items-center text-sm text-blue-200">
+                        <i class="fas fa-blog mr-2"></i>
+                        <span>kitangoding.blogspot.com</span>
+                    </div>
+                </div>
+                
+                <div class="bg-code p-6 rounded-xl shadow-md text-white">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">Q&A Session</h3>
+                        <span class="code-badge bg-primary text-xs px-2 py-1 rounded">Live</span>
+                    </div>
+                    <p class="mb-4">Sesi tanya jawab langsung tentang masalah programming</p>
+                    <div class="flex items-center text-sm text-blue-200">
+                        <i class="fab fa-instagram mr-2"></i>
+                        <span>@kitangoding</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-lg max-w-2xl mx-auto">Saya berkomitmen untuk terus berbagi pengetahuan dan source code secara gratis. Dengan donasi Anda, saya bisa terus berkarya dan membantu lebih banyak developer pemula.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donasi Section -->
+    <section id="donasi" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Dukung Saya dengan Donasi</h2>
+            
+            <div class="flex flex-col md:flex-row max-w-5xl mx-auto gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold text-primary mb-6">Donasi via QRIS</h3>
+                        <p class="mb-6">Scan QR code di samping menggunakan aplikasi bank atau dompet digital Anda yang mendukung QRIS.</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-2">Langkah-langkah:</h4>
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li>Buka aplikasi bank atau dompet digital Anda</li>
+                                <li>Pilih menu pembayaran atau scan QR</li>
+                                <li>Arahkan kamera ke QR code</li>
+                                <li>Masukkan nominal donasi</li>
+                                <li>Konfirmasi pembayaran</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+                            <p class="text-blue-700">Donasi Anda akan membantu saya terus berbagi pengetahuan dan source code gratis untuk komunitas developer Indonesia.</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+                            <p class="text-yellow-700">Terima kasih atas setiap donasi yang diberikan! Nama Anda akan tercantum di halaman special contributor (jika diinginkan).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 floating">
+                        <img src="1000283197.jpg" alt="QR Code Donasi" class="w-full rounded-lg mb-4">
+                        <div class="text-center">
+                            <p class="font-semibold">Scan QR code di atas untuk berdonasi</p>
+                            <p class="text-sm text-gray-600 mt-2">Menerima pembayaran dari semua aplikasi yang mendukung QRIS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 bg-white p-6 rounded-xl shadow-md">
+                        <h4 class="text-xl font-semibold mb-4">Testimoni Donatur</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-gray-600">"Terima kasih untuk source code-nya, sangat membantu project kampus saya!"</p>
+                                <p class="text-sm font-semibold mt-2">- Ahmad, Mahasiswa TI</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600">"Tutorialnya mudah dipahami, cocok untuk pemula seperti saya."</p>
+                                <p class="text-sm font-semibold mt-2">- Sari, Frontend Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Terima Kasih Atas Dukungannya</h3>
+                <p class="max-w-2xl mx-auto mb-6">Donasi Anda tidak hanya membantu saya mendapatkan perangkat yang lebih baik, tetapi juga mendukung ekosistem developer Indonesia dengan konten programming gratis.</p>
+                
+                <div class="flex justify-center space-x-4 mb-6">
+                    <a href="#" class="h-10 w-10 rounded-full bg-primary flex items-center justify-center hover:bg-blue-600 transition">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 rounded-full bg-primary flex items-center justify-center hover:bg-blue-600 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 rounded-full bg-primary flex items-center justify-center hover:bg-blue-600 transition">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 rounded-full bg-primary flex items-center justify-center hover:bg-blue-600 transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                
+                <p class="text-sm text-gray-400">© 2023 @kitangoding - Berbagi Source Code Gratis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animasi progress bar ketika elemen terlihat di viewport
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.querySelector('.progress-bar');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        progressBar.style.width = '27%';
+                    }
+                });
+            });
+            
+            observer.observe(progressBar);
+        });
+    </script>
+</body>
+  </html>
