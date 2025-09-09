@@ -7,10 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-        }
-        
         body { 
             -webkit-user-select: none;
             -moz-user-select: none;
@@ -18,208 +14,103 @@
             user-select: none;
             -webkit-touch-callout: none;
             -webkit-tap-highlight-color: transparent;
-            overflow-x: hidden;
         }
-        
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-        
         .card-shadow {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
-        
         .floating {
             animation: floating 3s ease-in-out infinite;
         }
-        
         @keyframes floating {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
-        
         .pulse-border {
             animation: pulse 2s infinite;
         }
-        
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
             70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
             100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
         }
-        
         .shine {
             background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.5) 50%, transparent 60%);
             background-size: 200% 200%;
             animation: shine 2s infinite;
         }
-        
         @keyframes shine {
             0% { background-position: -200% -200%; }
             100% { background-position: 200% 200%; }
         }
-        
         .typing {
             overflow: hidden;
             border-right: 2px solid #667eea;
+            white-space: nowrap;
             animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
         }
-        
         @keyframes typing {
             from { width: 0 }
             to { width: 100% }
         }
-        
         @keyframes blink-caret {
             from, to { border-color: transparent }
             50% { border-color: #667eea }
-        }
-
-        /* Mobile Responsive Fixes */
-        @media (max-width: 640px) {
-            .typing {
-                white-space: normal;
-                border-right: none;
-                animation: none;
-            }
-            
-            .container {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-            
-            .text-4xl {
-                font-size: 1.875rem;
-                line-height: 2.25rem;
-            }
-            
-            .text-3xl {
-                font-size: 1.5rem;
-                line-height: 2rem;
-            }
-            
-            .text-2xl {
-                font-size: 1.25rem;
-                line-height: 1.75rem;
-            }
-            
-            .text-xl {
-                font-size: 1rem;
-                line-height: 1.5rem;
-            }
-            
-            .py-12 {
-                padding-top: 2rem;
-                padding-bottom: 2rem;
-            }
-            
-            .p-8 {
-                padding: 1rem;
-            }
-            
-            .mb-16 {
-                margin-bottom: 2rem;
-            }
-            
-            .mb-12 {
-                margin-bottom: 1.5rem;
-            }
-            
-            .gap-8 {
-                gap: 1rem;
-            }
-        }
-
-        /* Tablet Responsive */
-        @media (max-width: 768px) {
-            .md\:text-5xl {
-                font-size: 2.25rem;
-                line-height: 2.5rem;
-            }
-            
-            .md\:text-4xl {
-                font-size: 1.875rem;
-                line-height: 2.25rem;
-            }
-            
-            .md\:p-12 {
-                padding: 1.5rem;
-            }
-        }
-
-        /* Ultra small screens */
-        @media (max-width: 375px) {
-            .text-4xl {
-                font-size: 1.5rem;
-                line-height: 2rem;
-            }
-            
-            .text-3xl {
-                font-size: 1.25rem;
-                line-height: 1.75rem;
-            }
-            
-            .p-8 {
-                padding: 0.75rem;
-            }
-            
-            .py-8 {
-                padding-top: 1.5rem;
-                padding-bottom: 1.5rem;
-            }
         }
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Header -->
     <header class="gradient-bg text-white">
-        <div class="container mx-auto px-4 py-6 sm:py-8">
+        <div class="container mx-auto px-4 py-8">
             <div class="text-center">
-                <div class="floating mb-4 sm:mb-6">
-                    <div class="w-20 h-20 sm:w-32 sm:h-32 mx-auto bg-white rounded-full flex items-center justify-center text-4xl sm:text-6xl shadow-lg">
+                <div class="floating mb-6">
+                    <div class="w-32 h-32 mx-auto bg-white rounded-full flex items-center justify-center text-6xl shadow-lg">
                         💻
                     </div>
                 </div>
-                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 px-2">Bantu Mimpi Coding Saya</h1>
-                <p class="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 px-2">Mahasiswa IT yang berjuang dengan HP sebagai satu-satunya alat coding</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 typing">Bantu Mimpi Coding Saya</h1>
+                <p class="text-xl md:text-2xl opacity-90">Mahasiswa IT yang berjuang dengan HP sebagai satu-satunya alat coding</p>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 py-6 sm:py-12">
+    <main class="container mx-auto px-4 py-12">
         <!-- Story Section -->
-        <section class="mb-8 sm:mb-16">
+        <section class="mb-16">
             <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-2xl card-shadow p-4 sm:p-6 md:p-8 lg:p-12">
-                    <div class="text-center mb-6 sm:mb-8">
-                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
-                            <i class="fas fa-heart text-red-500 mr-2 sm:mr-3"></i>
+                <div class="bg-white rounded-2xl card-shadow p-8 md:p-12">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                            <i class="fas fa-heart text-red-500 mr-3"></i>
                             Cerita Saya
                         </h2>
-                        <div class="w-16 sm:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded"></div>
+                        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded"></div>
                     </div>
                     
-                    <div class="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-center">
-                        <div class="space-y-4 sm:space-y-6 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
                             <p class="flex items-start">
-                                <i class="fas fa-mobile-alt text-blue-500 mr-2 sm:mr-3 mt-1 text-sm sm:text-base"></i>
+                                <i class="fas fa-mobile-alt text-blue-500 mr-3 mt-1"></i>
                                 Saat ini saya adalah <strong>Mahasiswa IT</strong> yang passionate dengan dunia programming, namun saya hanya memiliki HP sebagai alat untuk coding.
                             </p>
                             <p class="flex items-start">
-                                <i class="fas fa-code text-green-500 mr-2 sm:mr-3 mt-1 text-sm sm:text-base"></i>
+                                <i class="fas fa-code text-green-500 mr-3 mt-1"></i>
                                 Meski keterbatasan ini, saya tetap berusaha <strong>membagikan source code gratis</strong> dan membantu sesama developer melalui platform digital.
                             </p>
                             <p class="flex items-start">
-                                <i class="fas fa-star text-purple-500 mr-2 sm:mr-3 mt-1 text-sm sm:text-base"></i>
+                                <i class="fas fa-dream text-purple-500 mr-3 mt-1"></i>
                                 Mimpi saya sederhana: memiliki laptop atau PC untuk <strong>mengembangkan skill coding</strong> dan berkontribusi lebih besar untuk komunitas IT Indonesia.
                             </p>
                         </div>
-                        <div class="text-center mt-4 md:mt-0">
-                            <div class="bg-gray-100 rounded-2xl p-4 sm:p-6">
-                                <i class="fas fa-laptop-code text-4xl sm:text-6xl text-gray-400 mb-3 sm:mb-4"></i>
-                                <p class="text-gray-600 font-semibold text-sm sm:text-base">Impian: Laptop/PC untuk Coding</p>
-                                <p class="text-xs sm:text-sm text-gray-500 mt-2">Saat ini: Coding dengan HP 📱</p>
+                        <div class="text-center">
+                            <div class="bg-gray-100 rounded-2xl p-6">
+                                <i class="fas fa-laptop-code text-6xl text-gray-400 mb-4"></i>
+                                <p class="text-gray-600 font-semibold">Impian: Laptop/PC untuk Coding</p>
+                                <p class="text-sm text-gray-500 mt-2">Saat ini: Coding dengan HP 📱</p>
                             </div>
                         </div>
                     </div>
@@ -228,98 +119,55 @@
         </section>
 
         <!-- Impact Section -->
-        <section class="mb-8 sm:mb-16">
+        <section class="mb-16">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6 sm:mb-8 md:mb-12 px-2">
-                    <i class="fas fa-rocket text-blue-500 mr-2 sm:mr-3"></i>
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+                    <i class="fas fa-rocket text-blue-500 mr-3"></i>
                     Apa yang Akan Saya Lakukan?
                 </h2>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-                    <div class="bg-white rounded-xl card-shadow p-4 sm:p-6 text-center hover:transform hover:scale-105 transition-all duration-300">
-                        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                            <i class="fas fa-code text-blue-600 text-xl sm:text-2xl"></i>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl card-shadow p-6 text-center hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-code text-blue-600 text-2xl"></i>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">Source Code Gratis</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">Terus berbagi source code berkualitas untuk membantu sesama developer belajar</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Source Code Gratis</h3>
+                        <p class="text-gray-600">Terus berbagi source code berkualitas untuk membantu sesama developer belajar</p>
                     </div>
-                    <div class="bg-white rounded-xl card-shadow p-4 sm:p-6 text-center hover:transform hover:scale-105 transition-all duration-300">
-                        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                            <i class="fas fa-graduation-cap text-green-600 text-xl sm:text-2xl"></i>
+                    <div class="bg-white rounded-xl card-shadow p-6 text-center hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-graduation-cap text-green-600 text-2xl"></i>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">Tutorial & Edukasi</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">Membuat konten edukatif tentang programming untuk pemula hingga advanced</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Tutorial & Edukasi</h3>
+                        <p class="text-gray-600">Membuat konten edukatif tentang programming untuk pemula hingga advanced</p>
                     </div>
-                    <div class="bg-white rounded-xl card-shadow p-4 sm:p-6 text-center hover:transform hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1">
-                        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                            <i class="fas fa-users text-purple-600 text-xl sm:text-2xl"></i>
+                    <div class="bg-white rounded-xl card-shadow p-6 text-center hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-purple-600 text-2xl"></i>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">Membantu Komunitas</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">Memberikan support dan bantuan teknis kepada developer Indonesia</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Membantu Komunitas</h3>
+                        <p class="text-gray-600">Memberikan support dan bantuan teknis kepada developer Indonesia</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Donation Section -->
-        <section class="mb-8 sm:mb-16">
+        <section class="mb-16">
             <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-2xl card-shadow p-4 sm:p-6 md:p-8 lg:p-12">
-                    <div class="text-center mb-6 sm:mb-8">
-                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4 px-2">
-                            <i class="fas fa-gift text-yellow-500 mr-2 sm:mr-3"></i>
+                <div class="bg-white rounded-2xl card-shadow p-8 md:p-12">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                            <i class="fas fa-gift text-yellow-500 mr-3"></i>
                             Donasi Seikhlasnya
                         </h2>
-                        <p class="text-sm sm:text-base md:text-lg text-gray-600 mb-4 sm:mb-6 px-2">Setiap rupiah yang Anda berikan sangat berarti untuk mewujudkan mimpi saya</p>
-                        <div class="w-16 sm:w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded"></div>
+                        <p class="text-lg text-gray-600 mb-6">Setiap rupiah yang Anda berikan sangat berarti untuk mewujudkan mimpi saya</p>
+                        <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded"></div>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-center">
-                        <div class="text-center order-2 md:order-1">
-                            <div class="bg-gray-50 rounded-2xl p-4 sm:p-6 md:p-8 pulse-border">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="text-center">
+                            <div class="bg-gray-50 rounded-2xl p-8 pulse-border">
                                 <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzMzMzMzMyIvPgogIDx0ZXh0IHg9IjE1MCIgeT0iMTUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+UVIgQ29kZSBEb25hc2k8L3RleHQ+Cjwvc3ZnPgo=" 
-                                     alt="QR Code Donasi" 
-                                     class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto rounded-2xl shadow-lg">
-                                <p class="text-xs sm:text-sm text-gray-500 mt-3 sm:mt-4">Scan QR Code untuk donasi</p>
-                                <p class="text-xs text-gray-400 mt-1">NMID: ID2024318962121</p>
-                            </div>
-                        </div>
-                        <div class="space-y-4 sm:space-y-6 order-1 md:order-2">
-                            <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-4 sm:p-6">
-                                <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3 sm:mb-4">
-                                    <i class="fas fa-hand-holding-heart text-red-500 mr-2"></i>
-                                    Mengapa Donasi?
-                                </h3>
-                                <ul class="space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check-circle text-green-500 mr-2 sm:mr-3 text-sm"></i>
-                                        Membantu mahasiswa IT berprestasi
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check-circle text-green-500 mr-2 sm:mr-3 text-sm"></i>
-                                        Investasi untuk komunitas developer
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check-circle text-green-500 mr-2 sm:mr-3 text-sm"></i>
-                                        Mendukung sharing knowledge gratis
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check-circle text-green-500 mr-2 sm:mr-3 text-sm"></i>
-                                        Pahala yang terus mengalir
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="text-center">
-                                <button onclick="showAppsList()" class="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shine">
-                                    <i class="fas fa-mobile-alt mr-2"></i>
-                                    Donasi Sekarang
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
                                      alt="QR Code Donasi" 
                                      class="w-64 h-64 mx-auto rounded-2xl shadow-lg">
                                 <p class="text-sm text-gray-500 mt-4">Scan QR Code untuk donasi</p>
@@ -365,41 +213,41 @@
         </section>
 
         <!-- Support Apps -->
-        <section class="mb-8 sm:mb-16">
+        <section class="mb-16">
             <div class="max-w-4xl mx-auto text-center">
-                <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 px-2">Aplikasi yang Mendukung QRIS</h3>
-                <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6">
-                    <div class="bg-white rounded-xl p-2 sm:p-3 md:p-4 shadow-lg">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCA2MCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjMwIiByeD0iNiIgZmlsbD0iIzAwQTFFNSIvPgo8dGV4dCB4PSIzMCIgeT0iMTgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5EQU5BPC90ZXh0Pgo8L3N2Zz4K" alt="DANA" class="h-6 sm:h-8 md:h-10">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Aplikasi yang Mendukung QRIS</h3>
+                <div class="flex flex-wrap justify-center items-center gap-6">
+                    <div class="bg-white rounded-xl p-4 shadow-lg">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA4MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzAwQTFFNSIvPgo8dGV4dCB4PSI0MCIgeT0iMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5EQU5BPC90ZXh0Pgo8L3N2Zz4K" alt="DANA" class="h-10">
                     </div>
-                    <div class="bg-white rounded-xl p-2 sm:p-3 md:p-4 shadow-lg">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCA2MCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjMwIiByeD0iNiIgZmlsbD0iIzAwQUNFNiIvPgo8dGV4dCB4PSIzMCIgeT0iMTgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5HT1BBWTwvdGV4dD4KPC9zdmc+Cg==" alt="GoPay" class="h-6 sm:h-8 md:h-10">
+                    <div class="bg-white rounded-xl p-4 shadow-lg">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA4MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzAwQUNFNiIvPgo8dGV4dCB4PSI0MCIgeT0iMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5HT1BBWTwvdGV4dD4KPC9zdmc+Cg==" alt="GoPay" class="h-10">
                     </div>
-                    <div class="bg-white rounded-xl p-2 sm:p-3 md:p-4 shadow-lg">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCA2MCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjMwIiByeD0iNiIgZmlsbD0iI0VFMjAyNCIvPgo8dGV4dCB4PSIzMCIgeT0iMTgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5MaW5rQWphPC90ZXh0Pgo8L3N2Zz4K" alt="LinkAja" class="h-6 sm:h-8 md:h-10">
+                    <div class="bg-white rounded-xl p-4 shadow-lg">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA4MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iI0VFMjAyNCIvPgo8dGV4dCB4PSI0MCIgeT0iMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5MaW5rQWphPC90ZXh0Pgo8L3N2Zz4K" alt="LinkAja" class="h-10">
                     </div>
-                    <div class="bg-white rounded-xl p-2 sm:p-3 md:p-4 shadow-lg">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCA2MCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjMwIiByeD0iNiIgZmlsbD0iI0ZGMzMzMyIvPgo8dGV4dCB4PSIzMCIgeT0iMTgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5PQ1RPPC90ZXh0Pgo8L3N2Zz4K" alt="OCTO Mobile" class="h-6 sm:h-8 md:h-10">
+                    <div class="bg-white rounded-xl p-4 shadow-lg">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA4MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iI0ZGMzMzMyIvPgo8dGV4dCB4PSI0MCIgeT0iMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5PQ1RPPC90ZXh0Pgo8L3N2Zz4K" alt="OCTO Mobile" class="h-10">
                     </div>
-                    <div class="bg-white rounded-xl p-2 sm:p-3 md:p-4 shadow-lg">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCA2MCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjMwIiByeD0iNiIgZmlsbD0iIzRDNTNBNSIvPgo8dGV4dCB4PSIzMCIgeT0iMTgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5PVk88L3RleHQ+Cjwvc3ZnPgo=" alt="OVO" class="h-6 sm:h-8 md:h-10">
+                    <div class="bg-white rounded-xl p-4 shadow-lg">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA4MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzRDNTNBNSIvPgo8dGV4dCB4PSI0MCIgeT0iMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5PVk88L3RleHQ+Cjwvc3ZnPgo=" alt="OVO" class="h-10">
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-500 mt-3 sm:mt-4 px-2">Dan masih banyak aplikasi lainnya yang mendukung QRIS</p>
+                <p class="text-sm text-gray-500 mt-4">Dan masih banyak aplikasi lainnya yang mendukung QRIS</p>
             </div>
         </section>
 
         <!-- Testimonial/Thank You -->
-        <section class="mb-8 sm:mb-16">
+        <section class="mb-16">
             <div class="max-w-4xl mx-auto">
-                <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 text-center">
-                    <div class="mb-4 sm:mb-6">
-                        <i class="fas fa-quote-left text-2xl sm:text-3xl md:text-4xl text-green-500 opacity-50"></i>
+                <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 md:p-12 text-center">
+                    <div class="mb-6">
+                        <i class="fas fa-quote-left text-4xl text-green-500 opacity-50"></i>
                     </div>
-                    <blockquote class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 font-medium mb-4 sm:mb-6 italic px-2">
+                    <blockquote class="text-xl md:text-2xl text-gray-800 font-medium mb-6 italic">
                         "Setiap donasi yang Anda berikan bukan hanya membantu saya pribadi, tetapi juga berkontribusi untuk kemajuan komunitas developer Indonesia. Terima kasih atas dukungan dan kepercayaannya!"
                     </blockquote>
-                    <div class="flex justify-center items-center space-x-2 text-sm sm:text-base md:text-lg text-gray-600">
+                    <div class="flex justify-center items-center space-x-2 text-lg text-gray-600">
                         <i class="fas fa-heart text-red-500"></i>
                         <span class="font-semibold">@kitangoding</span>
                         <i class="fas fa-heart text-red-500"></i>
@@ -410,26 +258,26 @@
     </main>
 
     <!-- Footer -->
-    <footer class="gradient-bg text-white py-6 sm:py-8">
+    <footer class="gradient-bg text-white py-8">
         <div class="container mx-auto px-4 text-center">
-            <div class="mb-4 sm:mb-6">
-                <h3 class="text-xl sm:text-2xl font-bold mb-2">Mari Wujudkan Mimpi Bersama! 🚀</h3>
-                <p class="text-sm sm:text-base md:text-lg opacity-90">Setiap kontribusi Anda sangat berarti</p>
+            <div class="mb-6">
+                <h3 class="text-2xl font-bold mb-2">Mari Wujudkan Mimpi Bersama! 🚀</h3>
+                <p class="text-lg opacity-90">Setiap kontribusi Anda sangat berarti</p>
             </div>
-            <div class="flex justify-center space-x-4 sm:space-x-6 mb-4 sm:mb-6">
+            <div class="flex justify-center space-x-6 mb-6">
                 <a href="#" class="hover:text-blue-300 transition-colors">
-                    <i class="fab fa-tiktok text-xl sm:text-2xl"></i>
+                    <i class="fab fa-tiktok text-2xl"></i>
                 </a>
                 <a href="#" class="hover:text-blue-300 transition-colors">
-                    <i class="fab fa-instagram text-xl sm:text-2xl"></i>
+                    <i class="fab fa-instagram text-2xl"></i>
                 </a>
                 <a href="#" class="hover:text-blue-300 transition-colors">
-                    <i class="fab fa-github text-xl sm:text-2xl"></i>
+                    <i class="fab fa-github text-2xl"></i>
                 </a>
             </div>
-            <div class="border-t border-white border-opacity-20 pt-4 sm:pt-6">
-                <p class="text-sm sm:text-base">&copy; 2024 @kitangoding - Mahasiswa IT dengan Mimpi Besar</p>
-                <p class="text-xs sm:text-sm opacity-75 mt-1">Dibuat dengan ❤️ menggunakan HP</p>
+            <div class="border-t border-white border-opacity-20 pt-6">
+                <p>&copy; 2024 @kitangoding - Mahasiswa IT dengan Mimpi Besar</p>
+                <p class="text-sm opacity-75 mt-1">Dibuat dengan ❤️ menggunakan HP</p>
             </div>
         </div>
     </footer>
@@ -737,4 +585,4 @@
         });
     </script>
 </body>
-    </html>
+</html>
