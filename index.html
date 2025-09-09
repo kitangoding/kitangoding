@@ -61,62 +61,63 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
-    <main class="container mx-auto px-4 py-12">
-        <section class="mb-16">
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-2xl card-shadow p-8 md:p-12">
-                    <div class="text-center mb-8">
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-gift text-yellow-500 mr-3"></i>
-                            Donasi Seikhlasnya
-                        </h2>
-                        <p class="text-lg text-gray-600 mb-6">Setiap rupiah yang Anda berikan sangat berarti untuk mewujudkan mimpi saya</p>
-                        <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded"></div>
-                    </div>
+<body class="bg-gray-200 flex items-center justify-center min-h-screen p-4">
+    <main class="w-full max-w-4xl">
+        <section>
+            <div class="bg-white rounded-2xl card-shadow p-8 md:p-12">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 flex items-center justify-center">
+                        <img src="logo.png" alt="Logo" class="h-10 w-10 mr-3">
+                        Donasi Seikhlasnya
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6">Setiap rupiah yang Anda berikan sangat berarti untuk mewujudkan mimpi mimin 🥺.</p>
+                    <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded"></div>
+                </div>
 
-                    <div class="grid md:grid-cols-2 gap-8 items-center">
-                        <div class="text-center">
-                            <div class="bg-gray-50 rounded-2xl p-8 pulse-border">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <div class="bg-gray-50 rounded-2xl p-8 pulse-border">
+                            <a href="QR.jpg" download="QR-Donasi-KitaNgoding.jpg" title="Klik untuk mengunduh QR Code">
                                 <img src="QR.jpg" 
-                                        alt="QR Code Donasi" 
-                                        class="w-64 h-64 mx-auto rounded-2xl shadow-lg object-cover">
-                                <p class="text-sm text-gray-500 mt-4">Scan QR Code untuk donasi</p>
-                                <p class="text-xs text-gray-400 mt-1">NMID: ID2024318962121</p>
-                            </div>
+                                     alt="QR Code Donasi" 
+                                     class="w-64 h-64 mx-auto rounded-2xl shadow-lg object-cover cursor-pointer transition-transform transform hover:scale-105">
+                            </a>
+                            <p class="text-sm text-gray-500 mt-4">Scan QR Code untuk donasi</p>
+                            <p class="text-xs text-blue-600 mt-1 font-semibold">Klik gambar untuk mengunduh QR Code</p>
+                            <p class="text-xs text-gray-400 mt-1">NMID: ID2024318962121</p>
                         </div>
-                        <div class="space-y-6">
-                            <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6">
-                                <h3 class="text-xl font-bold text-gray-800 mb-4">
-                                    <i class="fas fa-hand-holding-heart text-red-500 mr-2"></i>
-                                    Mengapa Donasi?
-                                </h3>
-                                <ul class="space-y-3 text-gray-700">
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                        Membantu mahasiswa IT berprestasi
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                        Investasi untuk komunitas developer
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                        Mendukung sharing knowledge gratis
-                                    </li>
-                                    <li class="flex items-center">
-                                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                        Pahala yang terus mengalir
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="text-center">
-                                <button onclick="showAppsList()" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shine">
-                                    <i class="fas fa-mobile-alt mr-2"></i>
-                                    Cara Donasi
-                                </button>
-                            </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">
+                                <i class="fas fa-hand-holding-heart text-red-500 mr-2"></i>
+                                Mengapa Donasi?
+                            </h3>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    Membantu mahasiswa IT yang membutuhkan
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    Mendukung lebih banyak source code gratis
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    Mentraktir mimin segelas kopi
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    Pahala yang terus mengalir
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button onclick="showAppsList()" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shine">
+                                <i class="fas fa-mobile-alt mr-2"></i>
+                                Cara Donasi
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -174,8 +175,8 @@
             modal.innerHTML = `
                 <div class="bg-white rounded-2xl p-8 max-w-md w-full">
                     <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">
-                            <i class="fas fa-mobile-alt text-blue-500 mr-2"></i>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center justify-center">
+                            <img src="logo.png" alt="Logo" class="h-8 w-8 mr-2">
                             Cara Donasi
                         </h3>
                         <p class="text-gray-600">Scan QR Code dengan aplikasi berikut:</p>
@@ -183,7 +184,7 @@
                     <div class="space-y-3">
                         <div class="flex items-center p-3 bg-gray-50 rounded-lg">
                             <i class="fas fa-qrcode text-blue-500 mr-3"></i>
-                            <span>Buka aplikasi DANA, GoPay, OVO, LinkAja, atau OCTO</span>
+                            <span>Buka aplikasi DANA, GoPay, OVO, LinkAja, atau lainnya</span>
                         </div>
                         <div class="flex items-center p-3 bg-gray-50 rounded-lg">
                             <i class="fas fa-camera text-green-500 mr-3"></i>
@@ -242,13 +243,6 @@
             cards.forEach(card => {
                 card.style.transition = 'all 0.6s ease-in-out';
             });
-        });
-
-        document.addEventListener('dragstart', function(e) {
-            if (e.target.tagName === 'IMG') {
-                e.preventDefault();
-                return false;
-            }
         });
 
         document.querySelectorAll('img').forEach(img => {
@@ -324,15 +318,7 @@
                 setTimeout(() => createFloatingHeart(), i * 200);
             }
         });
-
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const header = document.querySelector('header');
-            if (header) {
-                header.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
-
+        
         (function() {
             let devtools = { open: false, orientation: null };
             const threshold = 160;
@@ -366,15 +352,7 @@
                 return false;
             }
         });
-
-        document.onselectstart = function() {
-            return false;
-        };
         
-        document.onmousedown = function() {
-            return false;
-        };
-
         document.addEventListener('copy', function(e) {
             e.clipboardData.setData('text/plain', '');
             e.preventDefault();
